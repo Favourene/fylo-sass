@@ -1,0 +1,50 @@
+$background: hsl(217, 28%, 15%);
+$background2 : hsl(218, 28%, 13%);
+$font-color: #fff;
+$btn-background1 : hsl(176, 68%, 64%);
+$btn-background2 : hsl(198, 60%, 50%);
+$mobile-1 : 1000px;
+$mobile-2 : 700px;
+$mobile-3 : 500px;
+$mobile-4 : 360px;
+
+
+@mixin flexcenter {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+   justify-content: space-between;
+  align-items: center;
+}
+@mixin btn {
+  padding: 15px 50px;
+  border-radius: 20px;
+  color: $font-color;
+  border-style: none;
+  font-weight: bold;
+  @include mobile-2{
+    padding: 15px 50px;
+  }
+}
+
+@mixin mobile-1{
+  @media (max-width : $mobile-1){
+    @content;
+  }
+}
+@mixin mobile-2{
+  @media (max-width : $mobile-2){
+    @content;
+  }
+}
+@mixin mobile-3{
+  @media (max-width : $mobile-3){
+    @content;
+  }
+}
+@mixin mobile-4{
+  @media (max-width : $mobile-4){
+    @content;
+  }
+}

@@ -1,0 +1,362 @@
+@import './default';
+@import './resources';
+
+.first-section {
+  background-color: $background;
+
+  & .nav {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    @include mobile-3 {
+      padding: 20px;
+    }
+    & .left {
+      width: 80px;
+
+      & img {
+        width: 100%;
+      }
+    }
+
+    & .right ul {
+      display: flex;
+    }
+
+    & li {
+      list-style: none;
+      padding: 0 20px;
+      color: $font-color;
+      @include mobile-3 {
+        font-size: 12px;
+        padding: 0 5px;
+      }
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+        font-weight: 700;
+      }
+    }
+  }
+  & .hero-section {
+    flex-direction: column;
+    @include flexcenter;
+
+    & .image {
+      width: 50%;
+
+      & img {
+        width: 100%;
+      }
+    }
+
+    & .text {
+      color: $font-color;
+      background: url('../images/bg-curvy-desktop.svg');
+      padding: 30px 200px 70px 200px;
+      background-position-y: top;
+      background-position-x: center;
+      background-size: cover;
+      @include mobile-1 {
+        padding: 30px 100px 70px 100px;
+      }
+      @include mobile-2 {
+        padding: 30px 50px 70px 50px;
+      }
+      @include mobile-3 {
+        padding: 30px 20px 70px 20px;
+      }
+
+      & h1 {
+        font-size: 30px;
+        font-weight: 100;
+        padding-bottom: 20px;
+      }
+      & p {
+        padding-bottom: 10px;
+      }
+      & button {
+        @include btn;
+        background: $btn-background1;
+        @include mobile-2 {
+          margin-top: 30px;
+        }
+        &:hover {
+          background: $btn-background2;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+.second-section {
+  background: $background2;
+  @include flexcenter;
+  flex-wrap: wrap;
+  padding: 30px 70px;
+  @include mobile-3 {
+    padding: 30px 20px;
+  }
+  & .file {
+    width: 40%;
+    padding-bottom: 50px;
+    @include mobile-2 {
+      width: 100%;
+    }
+    & .img {
+      padding-bottom: 10px;
+    }
+    & .text {
+      color: $font-color;
+      & h2 {
+        font-weight: 100;
+        font-size: 20px;
+        padding-bottom: 5px;
+      }
+    }
+  }
+}
+.third-section {
+  @include flexcenter;
+  padding: 50px;
+  background: $background2;
+  @include mobile-2 {
+    padding: 50px 20px;
+  }
+  & .left {
+    width: 45%;
+    @include mobile-2 {
+      width: 100%;
+    }
+    & img {
+      width: 100%;
+    }
+  }
+  & .right {
+    text-align: left;
+    width: 50%;
+    color: $font-color;
+    padding-right: 100px;
+    @include mobile-2 {
+      width: 100%;
+      padding: 20px 0;
+    }
+    @mixin mobile-1 {
+      padding-right: 50px;
+    }
+    & h1 {
+      font-size: 35px;
+      font-weight: 100;
+      padding-bottom: 15px;
+    }
+    & p {
+      padding-bottom: 10px;
+    }
+    & span {
+      color: $btn-background1;
+      padding-bottom: 7px;
+      border-bottom: 1px solid $btn-background1;
+      & img {
+        width: 12px;
+      }
+      &:hover {
+        border-bottom: 1px solid $font-color;
+        cursor: pointer;
+        color: $font-color;
+      }
+    }
+  }
+}
+.forth-section {
+  background: $background2;
+  padding: 30px 50px;
+  @include mobile-1 {
+    padding: 30px 20px;
+  }
+  & .image {
+    position: absolute;
+  }
+  & .parent-container {
+    @include flexcenter;
+    text-align: left;
+    padding: 30px 20px;
+    & .card {
+      z-index: 1;
+      width: 30%;
+      background: $background;
+      color: $font-color;
+      padding: 30px 20px;
+      @include mobile-1 {
+        width: 32%;
+      }
+      @include mobile-2 {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      & .user-card {
+        @include flexcenter;
+        padding-top: 20px;
+        & .img {
+          width: 15%;
+          border-radius: 50%;
+          overflow: hidden;
+          & img {
+            width: 100%;
+          }
+        }
+        & .text {
+          width: 80%;
+          text-align: left;
+          & h2 {
+            font-size: 15px;
+          }
+          & p {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+footer {
+  padding-top: 50px;
+  background: $background2;
+  position: relative;
+  & .box {
+    height: 150px;
+    position: absolute;
+    width: 100%;
+    background: $background2;
+    @include mobile-2 {
+      height: 200px;
+    }
+  }
+  & .fifth-section {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    & .parent-container {
+      width: 80%;
+      background: $background2;
+      padding: 50px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.301);
+      color: $font-color;
+      @include mobile-3 {
+        padding: 50px 20px;
+      }
+      & h1 {
+        font-size: 40px;
+        font-weight: 100;
+        padding-bottom: 15px;
+        @include mobile-3 {
+          font-size: 25px;
+        }
+      }
+      & p {
+        font-size: 20px;
+        padding-bottom: 30px;
+        @include mobile-3 {
+          font-size: 15px;
+        }
+      }
+    }
+    & .input {
+      @include flexcenter;
+      padding: 0 20px;
+      @include mobile-1 {
+        padding: 0;
+      }
+      & input {
+        width: 70%;
+        padding: 15px 25px;
+        border-radius: 20px;
+        border: none;
+        margin-top: 10px;
+        @include mobile-1 {
+          width: 100%;
+        }
+      }
+      & button {
+        margin-top: 10px;
+        @include btn;
+        background: $btn-background1;
+        &:hover {
+          background: $btn-background2;
+          cursor: pointer;
+        }
+        @include mobile-1 {
+          width: 100%;
+        }
+        @include mobile-3 {
+          padding: 15px 0;
+        }
+      }
+    }
+  }
+  & .footer {
+    background: #0b1523;
+    padding: 350px 50px 30px 50px;
+    @include mobile-1 {
+      padding: 400px 20px 30px 20px;
+    }
+    @include mobile-4 {
+      padding-top: 450px;
+    }
+    color: $font-color;
+    & img.fylo {
+      width: 100px;
+      padding-bottom: 50px;
+    }
+    & .parent {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      & .card1 {
+        width: 30%;
+        display: flex;
+        & img {
+          padding-right: 20px;
+        }
+        @include mobile-2 {
+          width: 100%;
+        }
+      }
+      & .card2 {
+        width: 20%;
+
+        & .sub-card {
+          display: flex;
+          padding: 10px 0;
+          & img {
+            padding-right: 20px;
+          }
+        }
+        @include mobile-2 {
+          width: 100%;
+        }
+      }
+      & .card3 {
+        width: 30%;
+        display: flex;
+        justify-content: space-evenly;
+        & ul {
+          & li {
+            list-style: none;
+            padding-bottom: 10px;
+            &:hover {
+              font-weight: bold;
+              cursor: pointer;
+            }
+          }
+        }
+        @include mobile-2 {
+          width: 100%;
+          flex-direction: column;
+          padding-top: 30px;
+        }
+      }
+    }
+  }
+}
